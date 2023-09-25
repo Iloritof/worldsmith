@@ -14,6 +14,8 @@ html {
 }
 
 body {
+  min-height: 100svh;
+
   color: hsl(var(--clr-l));
   background-color: hsl(var(--clr-p));
   font-family: var(--ff-body);
