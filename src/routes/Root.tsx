@@ -1,5 +1,9 @@
+import Navbar from "../components/navbar";
+
 export default function Root() {
   return (
-    <div>Hll</div>
+    <>
+      <Navbar />
+    </>
   )
 }
