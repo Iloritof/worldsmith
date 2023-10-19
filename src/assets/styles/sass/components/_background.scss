@@ -1,0 +1,18 @@
+.intro-bg {
+  min-height: 100dvh;
+  background-size: 210vw;
+  background-position: top right;
+  background-color: hsl(var(--clr-p));
+  background-blend-mode: screen;
+
+  display: grid;
+  grid-template-rows: min-content max-content;
+
+  & > *:where(:not(:first-child)) {
+    padding: 9.6rem;
+
+    @media screen and (max-width: 68.75em) {
+      padding: 6.4rem;
+    }
+  }
+}

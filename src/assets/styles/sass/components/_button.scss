@@ -1,0 +1,37 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  position: relative;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+
+  &--large {
+    border-radius: 100%;
+    aspect-ratio: 1;
+    padding: 6.4rem;
+
+    @media screen and (max-width: 68.75em) {
+      padding: 2.4rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      // background-color: hsl(var(--clr-l));
+      background-image: radial-gradient(hsl(var(--clr-l)), transparent 95%);
+      border-radius: 100%;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 500ms;
+      z-index: -1;
+    }
+
+    &:hover::after {
+      transform: scale(1.5);
+      // opacity: 0.5;
+    }
+  }
+}

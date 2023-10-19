@@ -16,9 +16,11 @@ html {
 body {
   min-height: 100svh;
 
-  color: hsl(var(--clr-l));
+  color: hsl(var(--clr-t));
   background-color: hsl(var(--clr-p));
-  font-family: var(--ff-body);
+  font-family: var(--ff-sans);
+  font-weight: 400;
+  letter-spacing: 0.5px;
   font-size: var(--fs-400);
   line-height: var(--lh-default);
   -webkit-font-smoothing: antialiased;

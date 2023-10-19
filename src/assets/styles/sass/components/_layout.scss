@@ -1,0 +1,9 @@
+.layout {
+  display: grid;
+  gap: 4.8rem 9.6rem;
+  place-items: center;
+
+  @media screen and (max-width: 1100px) {
+    gap: 4.8rem 9.6rem;
+  }
+}

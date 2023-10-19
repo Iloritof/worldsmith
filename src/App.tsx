@@ -1,55 +1,52 @@
-import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import Root from './routes/Root';
-import ErrorPage from './ErrorPage';
-import World from './routes/World';
-import Universe from './routes/Universe';
-import Constellation from './routes/Constellation';
-import Galaxy from './routes/Galaxy';
-import Star from './routes/Star';
-import Planet from './routes/Planet';
-import Satellite from './routes/Satellite';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Root from "./routes/Root";
+import ErrorPage from "./ErrorPage";
+import World from "./routes/World";
+import Universe from "./routes/Universe";
+import Constellation from "./routes/Constellation";
+import Galaxy from "./routes/Galaxy";
+import Star from "./routes/Star";
+import Planet from "./routes/Planet";
+import Satellite from "./routes/Satellite";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
   },
   {
-    path: 'world',
-    element: <World />
+    path: "world",
+    element: <World />,
   },
   {
-    path: 'universe',
-    element: <Universe />
+    path: "universe/:universeId",
+    element: <Universe />,
   },
   {
-    path: 'constellations/:constallationId',
-    element: <Constellation />
+    path: "constellations/:constallationId",
+    element: <Constellation />,
   },
   {
-    path: 'galaxys/:galaxyId',
-    element: <Galaxy />
+    path: "galaxys/:galaxyId",
+    element: <Galaxy />,
   },
   {
-    path: 'stars/:starId',
-    element: <Star />
+    path: "stars/:starId",
+    element: <Star />,
   },
   {
-    path: 'planets/:planetId',
-    element: <Planet />
+    path: "planets/:planetId",
+    element: <Planet />,
   },
   {
-    path: 'satellite/:satelliteId',
-    element: <Satellite />
-  }
-])
+    path: "satellite/:satelliteId",
+    element: <Satellite />,
+  },
+]);
 
 function App() {
-
-  return (
-    <RouterProvider router={router} />
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

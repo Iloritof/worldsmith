@@ -4,7 +4,9 @@ export default function Navbar() {
   return (
     <nav className="intro-nav h-sub">
       <div className="intro-nav__logo-box">
-        <div className="intro-nav__logo bc-l"></div>
+        <Link to={`/`}>
+          <div className="intro-nav__logo bc-l"></div>
+        </Link>
       </div>
 
       <div className="intro-nav__rule"></div>
