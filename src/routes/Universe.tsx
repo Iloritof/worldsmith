@@ -1,8 +1,11 @@
-export default function Universe() {
+import Main from '../components/Main';
+import Navbar from '../components/Navbar';
 
+export default function Universe() {
   return (
-    <div>
-      Universe
-    </div>
-  )
+    <Main>
+      <Navbar navText='Universe' />
+      well
+    </Main>
+  );
 }

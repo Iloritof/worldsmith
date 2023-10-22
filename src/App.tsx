@@ -1,46 +1,46 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/Root";
-import ErrorPage from "./ErrorPage";
-import World from "./routes/World";
-import Universe from "./routes/Universe";
-import Constellation from "./routes/Constellation";
-import Galaxy from "./routes/Galaxy";
-import Star from "./routes/Star";
-import Planet from "./routes/Planet";
-import Satellite from "./routes/Satellite";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Root from './routes/Root';
+import ErrorPage from './ErrorPage';
+import World from './routes/World';
+import Universe from './routes/Universe';
+import Constellation from './routes/Constellation';
+import Galaxy from './routes/Galaxy';
+import Star from './routes/Star';
+import Planet from './routes/Planet';
+import Satellite from './routes/Satellite';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Root />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "world",
+    path: 'world',
     element: <World />,
   },
   {
-    path: "universe/:universeId",
+    path: 'universe',
     element: <Universe />,
   },
   {
-    path: "constellations/:constallationId",
+    path: 'constellations/:constallationId',
     element: <Constellation />,
   },
   {
-    path: "galaxys/:galaxyId",
+    path: 'galaxys/:galaxyId',
     element: <Galaxy />,
   },
   {
-    path: "stars/:starId",
+    path: 'stars/:starId',
     element: <Star />,
   },
   {
-    path: "planets/:planetId",
+    path: 'planets/:planetId',
     element: <Planet />,
   },
   {
-    path: "satellite/:satelliteId",
+    path: 'satellite/:satelliteId',
     element: <Satellite />,
   },
 ]);

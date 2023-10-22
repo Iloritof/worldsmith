@@ -1,0 +1,29 @@
+.intro-main {
+  min-height: 100dvh;
+  background-size: 210vw;
+  background-position: top right;
+  background-color: hsl(var(--clr-p));
+  background-blend-mode: screen;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+.main {
+  position: relative;
+  min-height: 100dvh;
+  background-color: hsl(var(--clr-p));
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  & img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.3;
+    mix-blend-mode: screen;
+  }
+}

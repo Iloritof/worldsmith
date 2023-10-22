@@ -1,4 +1,4 @@
-.intro-nav {
+.nav--intro {
   position: sticky;
   top: 0;
   padding-block: 4rem;
@@ -49,7 +49,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       inset: 0;
       display: inline-block;
@@ -68,5 +68,19 @@
       translate: 0 95%;
       background-color: hsl(var(--clr-t));
     }
+  }
+}
+
+.nav {
+  text-align: center;
+  padding: 0.8rem;
+
+  @supports (backdrop-filter: blur(8rem)) {
+    background-color: hsl(var(--clr-l) / 0.04);
+    backdrop-filter: blur(8rem);
+  }
+
+  span {
+    margin-right: 1.6rem;
   }
 }

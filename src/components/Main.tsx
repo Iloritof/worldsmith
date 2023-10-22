@@ -1,22 +1,36 @@
-import background from "../assets/img/planet-horizons.jpg";
-import Navbar from "./Navbar";
+import introBackground from '../assets/img/planet-horizons.jpg';
+import background from '../assets/img/stellar.jpg';
+import Navbar from './Navbar';
 
 export interface Props {
   children?: React.ReactNode;
 }
 
-const Main = ({ children }: Props) => {
-  return (
+interface MainProps extends Props {
+  introMain?: boolean;
+}
+
+const Main = ({ introMain, children }: MainProps) => {
+  const exp = introMain ? (
     <div
-      className="intro-bg"
+      className='intro-main'
       style={{
-        backgroundImage: `url(${background})`,
+        backgroundImage: `url(${introBackground})`,
       }}
     >
       <Navbar />
       {children}
     </div>
+  ) : (
+    <>
+      <div className='main'>
+        <img src={background} alt='background image' />
+        {children}
+      </div>
+    </>
   );
+
+  return exp;
 };
 
 export default Main;
