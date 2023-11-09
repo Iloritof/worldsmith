@@ -1,17 +1,18 @@
 import Button from '../components/Button';
 import Layout from '../components/Layout';
 import Main from '../components/Main';
+import Navbar from '../components/Navbar';
 
 export default function Root() {
   return (
     <Main introMain={true}>
+      <Navbar intro={true} />
+
       <Layout
-        columns='
-        minmax(1.5rem, 1fr)
-        minmax(50rem, 60rem)
-        minmax(1rem, 1fr)
-        maxcontent
-        minmax(1.5rem, 1fr)'
+        columns={[
+          ['ratio', 0.5],
+          ['auto', 0],
+        ]}
       >
         <div>
           <h1 className='h5'>

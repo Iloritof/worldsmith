@@ -1,6 +1,5 @@
 import introBackground from '../assets/img/planet-horizons.jpg';
 import background from '../assets/img/stellar.jpg';
-import Navbar from './Navbar';
 
 export interface Props {
   children?: React.ReactNode;
@@ -12,22 +11,19 @@ interface MainProps extends Props {
 
 const Main = ({ introMain, children }: MainProps) => {
   const exp = introMain ? (
-    <div
+    <main
       className='intro-main'
       style={{
         backgroundImage: `url(${introBackground})`,
       }}
     >
-      <Navbar />
       {children}
-    </div>
+    </main>
   ) : (
-    <>
-      <div className='main'>
-        <img src={background} alt='background image' />
-        {children}
-      </div>
-    </>
+    <main className='main'>
+      <img src={background} alt='background image' />
+      {children}
+    </main>
   );
 
   return exp;

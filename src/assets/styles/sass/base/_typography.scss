@@ -5,6 +5,8 @@
   font-family: var(--ff-title);
   font-size: var(--fs-900);
   line-height: 1;
+
+  word-wrap: break-word;
 }
 
 .h2 {
@@ -41,8 +43,9 @@
 .h-sub {
   font-family: var(--ff-body);
   font-size: var(--fs-200);
+  font-weight: 200;
   line-height: normal;
-  letter-spacing: 2.35px;
+  letter-spacing: 2.36px;
 }
 
 .h1,

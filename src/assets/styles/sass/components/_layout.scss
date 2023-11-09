@@ -7,12 +7,29 @@
     minmax(1rem, 1fr)
     minmax(30rem, 50rem)
     minmax(1.5rem, 1fr);
+  justify-items: stretch;
 
-  & *:first-child {
+  & > *:first-child {
     grid-column: 2/3;
   }
 
-  & *:nth-child(2) {
+  & > *:nth-child(2) {
     grid-column: 4/5;
   }
+
+  & > div > img {
+    top: 0;
+    position: sticky;
+    width: 44.5rem;
+    aspect-ratio: 1;
+  }
+}
+
+.flex {
+  display: flex;
+  gap: var(--flex-gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-gap, 1rem);
 }

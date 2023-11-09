@@ -1,11 +1,18 @@
-const data = {
+export const data = {
   id: 1,
-  universe: {},
+  universes: [
+    {
+      id: 1,
+      name: 'Universe',
+      desc: ['Well'],
+    },
+  ],
   galaxies: [
     {
       id: 1,
       name: 'Milky Way',
-      desc: '',
+      desc: [''],
+      universeId: 1,
       radius: 50000,
       stellarLocation: 25800,
       stellarRadius: 10,
@@ -16,14 +23,14 @@ const data = {
     {
       id: 1,
       name: '',
-      desc: '',
+      desc: [''],
     },
   ],
   systems: [
     {
       id: 1,
       name: 'Sol',
-      desc: '',
+      desc: [''],
       galaxyId: 1,
       spacingFactor: 0.3,
       firstOrbit: 0.4,
@@ -33,7 +40,9 @@ const data = {
     {
       id: 1,
       name: 'Sun',
-      desc: 'Sun, star around which Earth and the other components of the solar system revolve',
+      desc: [
+        'Sun, star around which Earth and the other components of the solar system revolve',
+      ],
       systemId: 1,
       mass: 1,
       currentAge: 4.5,
@@ -43,7 +52,7 @@ const data = {
     {
       id: 1,
       name: 'Earth',
-      desc: '',
+      desc: [''],
       systemId: 1,
       mass: 1,
       cmf: 35,
@@ -60,8 +69,10 @@ const data = {
     {
       id: 1,
       name: 'Moon',
-      desc: "The Moon is Earth's only natural satellite",
+      desc: ["The Moon is Earth's only natural satellite"],
       planetId: 1,
     },
   ],
 };
+
+export default data;

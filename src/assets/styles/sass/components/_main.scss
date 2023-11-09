@@ -11,19 +11,21 @@
 
 .main {
   position: relative;
+  isolation: isolate;
   min-height: 100dvh;
   background-color: hsl(var(--clr-p));
 
   display: grid;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: repeat(2, min-content) 1fr;
 
-  & img {
+  & > img {
     position: absolute;
+    z-index: -1;
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
-    opacity: 0.3;
+    opacity: 0.2;
     mix-blend-mode: screen;
   }
 }

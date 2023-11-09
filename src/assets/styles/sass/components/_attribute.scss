@@ -1,0 +1,85 @@
+.attribute {
+  position: relative;
+
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+
+  & > :first-child {
+    margin-bottom: 1.6rem;
+  }
+
+  &__input {
+    background-color: transparent;
+    padding-inline: 0.8rem;
+    border: none;
+    border-bottom: 1px solid hsl(var(--clr-l) / 0.5);
+    flex: 1 1;
+
+    @supports (backdrop-filter: blur(2rem)) {
+      background-color: hsl(var(--clr-l) / 0.25);
+      backdrop-filter: blur(1rem);
+      color: hsl(var(--clr-l));
+      font-weight: 400;
+      outline: none;
+    }
+  }
+
+  &__btn {
+    margin-left: 1.6rem;
+    color: hsl(var(--clr-p));
+    font-family: var(--ff-sans);
+    font-size: var(--fs-200);
+    font-weight: 700;
+    padding-inline: 0.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__info {
+    margin-left: 0.8rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    & svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      fill: hsl(var(--clr-l) / 0.25);
+    }
+  }
+
+  &__hint {
+    position: absolute;
+    background-color: hsl(var(--clr-t));
+    color: hsl(var(--clr-p));
+    padding: 0.8rem;
+    text-align: justify;
+    top: 0;
+    font-weight: 700;
+    font-size: 1.4rem;
+    z-index: 1000;
+    translate: -3.6rem 2.4rem;
+    width: 45ch;
+
+    @supports (backdrop-filter: blur(8rem)) {
+      background-color: hsl(var(--clr-l) / 0.04);
+      backdrop-filter: blur(8rem);
+      color: hsl(var(--clr-l));
+      font-weight: 400;
+    }
+  }
+}
+
+.attribute-group {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+  padding-block: 2.4rem;
+  border-top: 1px solid hsl(var(--clr-l) / 0.25);
+}
+
+.attribute-group > *:only-child {
+  grid-column: 1/3;
+}

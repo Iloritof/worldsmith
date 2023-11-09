@@ -2,14 +2,14 @@
   /**************************
   ** layout
   ***************************/
-  --max-width: 140rem;
+  --max-width: 144rem;
 
   /**************************
   ** colors
   ***************************/
   --clr-p: 230 35% 7%;
   --clr-s: 231 77% 90%;
-  --clr-t: 231 79% 100%;
+  --clr-t: 0 0% 70%;
   --clr-a: ;
   --clr-h: ;
   --clr-l: 0 0% 100%;
@@ -18,9 +18,9 @@
   /**************************
   ** font family
   ***************************/
-  --ff-serif: "Bellefair Regular", serif;
-  --ff-sans: "Barlow", sans-serif;
-  --ff-cond: "Barlow Condensed", sans-serif, condensed;
+  --ff-serif: 'Bellefair Regular', serif;
+  --ff-sans: 'Barlow', sans-serif;
+  --ff-cond: 'Barlow Condensed', sans-serif, condensed;
   --ff-mono: ;
 
   --ff-title: var(--ff-serif);

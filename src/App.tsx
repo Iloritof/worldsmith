@@ -9,44 +9,58 @@ import Star from './routes/Star';
 import Planet from './routes/Planet';
 import Satellite from './routes/Satellite';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Root />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: 'world',
-    element: <World />,
-  },
-  {
-    path: 'universe',
-    element: <Universe />,
-  },
-  {
-    path: 'constellations/:constallationId',
-    element: <Constellation />,
-  },
-  {
-    path: 'galaxys/:galaxyId',
-    element: <Galaxy />,
-  },
-  {
-    path: 'stars/:starId',
-    element: <Star />,
-  },
-  {
-    path: 'planets/:planetId',
-    element: <Planet />,
-  },
-  {
-    path: 'satellite/:satelliteId',
-    element: <Satellite />,
-  },
-]);
+import { data } from './utils/data.ts';
+import { useState, useEffect } from 'react';
 
 function App() {
-  return <RouterProvider router={router} />;
+  const [world, setWorld] = useState(data);
+  useEffect(() => {
+    first;
+
+    return () => {
+      second;
+    };
+  }, []);
+
+  return (
+    <RouterProvider
+      router={createBrowserRouter([
+        {
+          path: '/',
+          element: <Root />,
+          errorElement: <ErrorPage />,
+        },
+        {
+          path: 'world',
+          element: <World />,
+        },
+        {
+          path: 'universe',
+          element: <Universe setData={setWorld} data={world} />,
+        },
+        {
+          path: 'constellations/:constallationId',
+          element: <Constellation />,
+        },
+        {
+          path: 'galaxys/:galaxyId',
+          element: <Galaxy />,
+        },
+        {
+          path: 'stars/:starId',
+          element: <Star />,
+        },
+        {
+          path: 'planets/:planetId',
+          element: <Planet />,
+        },
+        {
+          path: 'satellite/:satelliteId',
+          element: <Satellite />,
+        },
+      ])}
+    />
+  );
 }
 
 export default App;
