@@ -12,7 +12,7 @@
 .main {
   position: relative;
   isolation: isolate;
-  min-height: 100dvh;
+  height: 100dvh;
   background-color: hsl(var(--clr-p));
 
   display: grid;

@@ -1,17 +1,15 @@
-import Layout from '../components/Layout';
-import Main from '../components/Main';
-import Navbar from '../components/Navbar';
 import planet from '../assets/img/planet.jpg';
 import { useState } from 'react';
 import Input from '../components/Input';
 import { World } from '../utils/type';
+import Section from '../components/Section';
 
 interface RouteProps {
   data: World;
-  setData: React.Dispatch<React.SetStateAction<World>>;
+  setData?: React.Dispatch<React.SetStateAction<World>>;
 }
 
-export default function Universe({ data, setData }: RouteProps) {
+export default function Universe({ data }: RouteProps) {
   const [activeSection, setActiveSection] = useState('overview');
 
   const overview = (
@@ -50,69 +48,25 @@ export default function Universe({ data, setData }: RouteProps) {
     <div>
       <div className='attribute-group'>
         {data.galaxies.map((galaxy) => {
-          if (galaxy.universeId === 1) {
+          if (galaxy.universeId === 0) {
             return <p key={galaxy.id}>{galaxy.name}</p>;
           }
+          return;
         })}
       </div>
     </div>
   );
 
   return (
-    <Main>
-      <Navbar navText='Universe' />
-      <h1 className='h5 section__title'>
-        <span className='tc-t'>01 </span>
-        Universe
-      </h1>
-      <Layout
-        columns={[
-          ['fixed', 44.5],
-          ['auto', 0],
-        ]}
-        gap={12}
-        sideGap={10.4}
-      >
-        <div>
-          <img src={planet} alt='' />
-        </div>
-        <section className='section section--universe'>
-          <nav className='section__nav'>
-            <ul role='nav'>
-              <li>
-                <button
-                  aria-expanded={activeSection == 'overview' ? true : false}
-                  onClick={() => setActiveSection('overview')}
-                >
-                  Overview
-                </button>
-              </li>
-              <li>
-                <button
-                  aria-expanded={
-                    activeSection == 'characteristics' ? true : false
-                  }
-                  onClick={() => setActiveSection('characteristics')}
-                >
-                  Characteristics
-                </button>
-              </li>
-              <li>
-                <button
-                  aria-expanded={activeSection == 'content' ? true : false}
-                  onClick={() => setActiveSection('content')}
-                >
-                  Galaxies
-                </button>
-              </li>
-            </ul>
-          </nav>
-
-          {activeSection == 'overview' ? overview : ''}
-          {activeSection == 'characteristics' ? characteristics : ''}
-          {activeSection == 'content' ? content : ''}
-        </section>
-      </Layout>
-    </Main>
+    <Section
+      image={planet}
+      activeSection={activeSection}
+      setActiveSection={setActiveSection}
+      childrenName='Satellites'
+    >
+      {activeSection == 'overview' ? overview : ''}
+      {activeSection == 'characteristics' ? characteristics : ''}
+      {activeSection == 'content' ? content : ''}
+    </Section>
   );
 }

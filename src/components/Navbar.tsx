@@ -18,17 +18,17 @@ export default function Navbar({ intro, navText }: NavbarProps) {
 
       <ul className='nav--intro__menu'>
         <li>
-          <Link to={`universe`} className='nav--intro__link'>
+          <Link to={`/universe`} className='nav--intro__link'>
             <span className='nav--intro__link-number'>00</span>About
           </Link>
         </li>
         <li>
-          <Link to={`universe`} className='nav--intro__link'>
+          <Link to={`/planets/1`} className='nav--intro__link'>
             <span className='nav--intro__link-number'>01</span>Instructions
           </Link>
         </li>
         <li>
-          <Link to={`universe`} className='nav--intro__link'>
+          <Link to={`/universe`} className='nav--intro__link'>
             <span className='nav--intro__link-number'>02</span>Contact
           </Link>
         </li>
@@ -36,9 +36,9 @@ export default function Navbar({ intro, navText }: NavbarProps) {
     </nav>
   ) : (
     <nav className='nav h-sub tc-t'>
-      <p>
+      <Link to={`/`} className=''>
         <span>{'>'}</span> {navText}
-      </p>
+      </Link>
     </nav>
   );
 

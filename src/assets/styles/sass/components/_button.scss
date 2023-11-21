@@ -5,6 +5,7 @@
   display: grid;
   place-items: center;
   isolation: isolate;
+  justify-items: center;
 
   &--large {
     border-radius: 100%;
@@ -16,7 +17,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       display: inline-block;
       // background-color: hsl(var(--clr-l));

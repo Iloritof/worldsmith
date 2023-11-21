@@ -5,6 +5,6 @@ interface RouteProps {
   setData?: React.Dispatch<React.SetStateAction<World>>;
 }
 
-export default function Constellation({ data }: RouteProps) {
-  return <div>Constellation</div>;
+export default function Multiverse({ data }: RouteProps) {
+  return <div>well</div>;
 }

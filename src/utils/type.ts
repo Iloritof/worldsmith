@@ -6,7 +6,7 @@ export interface World {
   systems: System[];
   stars: Star[];
   planets: Planet[];
-  satellite: Satellite[];
+  satellites: Satellite[];
 }
 
 export interface Universe {
@@ -52,6 +52,7 @@ export interface Planet {
   rotationPeriod: number;
   albedo: number;
   greenhouseEffect: number;
+  heightOfObserver: number;
   semiMajorAxis: number;
   eccentricity: number;
   inclination: number;

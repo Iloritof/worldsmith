@@ -40,7 +40,7 @@ const Input = ({
               </svg>
             </button>
             <div
-              className={`attribute__hint ${hintActive ? '' : 'sr-only'}`}
+              className={`attribute__hint ${hintActive ? '' : 'sr-only'} flow`}
               aria-expanded={hintActive}
             >
               {children}

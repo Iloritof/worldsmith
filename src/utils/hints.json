@@ -1,0 +1,218 @@
+{
+  "starClass": [
+    "All stars are categorised by spectral type. From most to least massive & luminous the scale goes as follows: O, B, A, F, G, K, M.",
+
+    "Spectral classes are further subdivide by a number between 0 and 9. 0 means most massive/luminous, 9 means least massive/luminous.",
+
+    "'V' indicates that the star is on the main sequence, i.e, it's a sun-like star undergoing hydrogen burning in its core."
+  ],
+  "starMass": [
+    "Input your stars mass, in solar masses, here. Our sun = 1 Msol = 1.989E30 kg",
+    "The approximate mass ranges for main sequence stars as follows:",
+    "O Star: ~16+ Msol \nB Star: ~2.19 - 16 Msol \nA Star: ~1.44 - 2.19 Msol \nF Star: ~1.06 - 1.44 Msol \nG Star: ~0.84 - 1.06 Msol \nK Star: ~0.47 - 0.84 Msol \nM Star: ~0.075 - 0.47 Msol",
+
+    "Stars between 0.5 Msol and 1.4 Msol are considered habitable, i.e, the most suitable for earth-like life."
+  ],
+  "starCurrentAge": [
+    "Input the age of your star, in billions of earth years, here.",
+    "The value chosen must be less than the value listed in cell C8"
+  ],
+  "starMaxAge": [
+    "How long your star will remain on the main sequence, in billions of earth years."
+  ],
+  "starRadius": [
+    "How big your star is in solar radii. Our sun = 1 Rsol = 695,700 km"
+  ],
+  "starLuminosity": [
+    "The amount of light your star emits in solar luminosities. Our sun = 1 Lsol = 3.846E26 watts"
+  ],
+  "starDensity": ["How dense your star is. Our sun = 1 Dsol = 1.41 g/cm³."],
+  "starTemperature": ["The effective temperature of your star, in kelvin."],
+  "starHabitableZone": [
+    "A planet orbiting within this region of space will receive Earth-like levels of heating. Earth-like habitable planets must orbit within this zone.",
+
+    "1 AU = the distance from earth to the sun = ~150,000,000 km"
+  ],
+  "starEarth-like": [
+    "The spreadsheet checks to see if a planet comparable to modern-day Earth can orbit your star.",
+
+    "Yes: A planet with a biosphere comparable to modern-day Earth may, if you so desire, orbit this star.",
+
+    "No: A planet with a biosphere comparable to modern-day Earth CANNOT orbit this star.",
+
+    "Star Too Young: A planet comparable to pre-Cambrian Earth may, if you so desire, orbit your star."
+  ],
+  "starHabitableZoneInner": [
+    "The innermost boundary of your star's habitable zone.",
+
+    "1 AU = the distance from earth to the sun = ~150,000,000 km"
+  ],
+  "starHabitableZoneOuter": [
+    "The outermost boundary of your star's habitable zone.",
+
+    "1 AU = the distance from earth to the sun = ~150,000,000 km"
+  ],
+  "planetMass": [
+    "Input your planet's mass, in Earth masses, here. Earth = 1 MEarth = 5.972E24 kg",
+
+    "Terrestrial planets should have masses between 0.1 and 10 Earth masses.",
+
+    "Habitable Earth-like planets should have masses between 0.1 and 3.5 Earth masses."
+  ],
+  "planetCMF": [
+    "Input the Core Mass Fraction—the percentage of your planet's mass contained within its iron core—here.",
+
+    "For habitable Earth-like planets, it is recommended to chose a CMF value close to Earth's CMF (35%). This will ensure that your planets is capable of generating a sufficiently protective magnetic field, thus making your planet habitable"
+  ],
+  "planetDensity": [
+    "The average density of your planet. Earth = 5.51 g/cm³",
+
+    "The density of silicate rock is ~ 3 g/cm³ and the density of iron is ~ 8 g/cm³. The density of a habitable Earth-like planet should fall within this range, indicating the presence of an iron core and a silicate mantle."
+  ],
+  "planetRadius": [
+    "The radius of your planet in Earth radii. Earth = 1 REarth = 6371 km.",
+
+    "Terrestrial planets should have radii less than about 1.6 Earth radii",
+
+    "Habitable Earth-like planets should have radii between 0.5 and 1.5 Earth radii."
+  ],
+  "planetGravity": [
+    "The surface gravity at sea level on your planet. Earth = 1g = 9.8 m/s²",
+
+    "Habitable Earth-like planets should surface gravities between 0.4 and 1.6 g."
+  ],
+  "planetEscapeVelocity": [
+    "How fast a spacecraft would need to travelling in order to escape the planet's gravitational pull. Earth = 1 VEarth = 11.2 km/s",
+
+    "The higher the escape velocity the harder and more costly spaceflight will be."
+  ],
+  "planetAxialTilt": [
+    "Input your planets axial tilt, in degrees, here.",
+
+    "Axial tilt is a measure of how tilted a planet's rotational axis is with respect to the orbital plane. Values range from 0 to 180º. ",
+
+    "Planets with axial tilts between 0 and 90º spin in a prograde manner, i.e., in the same direction as their parent star.",
+    "Planets with axial tilts between 90 and 180º spin in a retrograde manner, i.e., in the opposite direction to their parent star.",
+
+    "Planets with tilts exactly equal to 90º are said to have undefined spins, they spin in neither a prograde nor a retrograde manner with respect to their parent star.",
+
+    "The higher the axial tilt, the more severe seasonality on your planet will be. Planets with axial tilts of 0º/180º will not experience any seasons.",
+
+    "Habitable earth-like planets should have axial tilts between 0 and 90º. Ideally, between 0 and 45º",
+
+    "Earth = 23.5º"
+  ],
+  "planetRotationDirection": [
+    "The direction your planet spins with respect the its star. Earth = Prograde",
+
+    "Prograde = planet has an axial tilt between 0º and 90º and therefor spins in the same direction as its star. Sun rises in the 'east' and sets in the 'west'.",
+
+    "Retrograde = planet has an axial tilt between 90º and 180º and therefor spins in the opposite direction as it stars. Sun rises in the 'west' sets in the 'east'",
+
+    "Undefined = planet has an axial tilt of exactly 90º. Therefor, by convention, its spin is neither prograde nor retrograde."
+  ],
+  "planetTropics": [
+    "Your planet's tropics, i.e, the range of latitudes within which your star will be seen directly overhead on at least one day in the year."
+  ],
+  "planetPolarCircles": [
+    "Your planet's polar circles, i.e., the range of latitudes where for at least one day per year the star will not rise or set."
+  ],
+  "planetRotationPeriod": [
+    "Input how fast your planet spins about it's axis, in Earth hours, here. Aka input your planet's day length.",
+
+    "Habitable Earth-like planets should have days between about 6 and 48 hours."
+  ],
+  "planetAlbedoBond": [
+    "Input your planet's albedo here. Albedo is a measure of how reflective a planet is, on a scale of 0 to 1.",
+
+    "0 = a perfect absorber, i.e, the planet absorbs 100% of the radiation it receives.",
+
+    "1 = a perfect reflector, i.,e the planet reflects 100% of the radiation it receives.",
+
+    "Mercury = 0.088 \nVenus = 0.689 \nEarth = 0.306 \nMoon = 0.136 \nMars = 0.25 \nJupiter = 0.503 \nSaturn = 0.342 \nUranus = 0.3 \nNeptune= 0.29 \nPluto = 0.49"
+  ],
+  "planetGreenhouseEffect": [
+    "Input how potent your planet's greenhouse effect is. The scale here goes from 0 to 500.",
+
+    "0 = No atmosphere so no greenhouse effect \n1 = Greenhouse effect equivalent to Earth",
+
+    "200 = Greenhouse effect equivalent to Venus."
+  ],
+  "planetSurfaceTemperature": [
+    "The average surface temperature of your planet. Earth = ~287 K ( ~14º C)",
+
+    "Orbital characteristics section will need to be completed before this calculation can run."
+  ],
+  "planetHeightOfObserver": [
+    "Input the height from which the horizon is to be observed, in metres, here."
+  ],
+  "planetHorizonDistance": [
+    "The distance to the horizon in km. This calculation assumes nothing is blocking the line of sight and atmospheric effects are not taken into account.",
+
+    "On Earth, the Horizon is roughly 5km away when viewed by an average sized human standing at sea level."
+  ],
+  "planetSemiMajorAxis": [
+    "Input how far out from your star, in AU, your planet orbits. Earth = 1 AU = ~150,000,000 km",
+
+    "Habitable Earth-like planets should orbit within the stars habitable zone listed in cells C5 and C6"
+  ],
+  "planetEccentricity": [
+    "Input your planet's orbital eccentricity here. This is a measure of how elliptical your planets orbit is. The scale goes from 0 to 1.",
+    "0 = orbit is a perfect circle \n1 = orbit is a parabola",
+
+    "Habitable Earth-like planets should have very low eccentricities to ensure that they orbit within the habitable zone at all times.",
+
+    "Earth's orbital eccentricity = 0.0167"
+  ],
+  "planetPerihelion": [
+    "The closest your planet will get to it's star.",
+
+    "For habitable Earth-like planets, this distance must falls within the habitable zone listed in cells C5 and C6."
+  ],
+  "planetAphelion": [
+    "The furthest away your planet will get from its star.",
+
+    "For habitable Earth-like planets, this distance must falls within the habitable zone listed in cells C5 and C6."
+  ],
+  "planetOrbitalPeriod": [
+    "The length of a year on your planet, in Earth years"
+  ],
+  "planetInclination": [
+    "How inclined your planets orbit is respect to your primary habitable world's orbital plane.",
+
+    "Primary habitable world = 0º \nAll other worlds = 0 - 180º (the lower the inclination value the better)"
+  ],
+  "planetOrbitalDirection": [
+    "Prograde = your planet orbits your star in the same direction as the star's spin.",
+
+    "Retrograde = your planet orbits your star in the opposite direction of the star's spin.",
+
+    "Undefined = the orbital inclination is exactly 90º, therefore the orbit is classed as being neither prograde nor retrograde.",
+
+    "Habitable Earth-like planets should have prograde orbital directions"
+  ],
+  "planetAtmosphericPressure": [
+    "Input your planets atmospheric pressure at sea level, in standard atmospheres, here. Earth = 1 atm",
+
+    "For habitable Earth-like planets, the atmospheric pressure will depend on how much Oxygen is in the atmosphere. Choose an appropriate value for the following list",
+
+    "10% 02 = 0.75 - 3.40 atm \n20% 02 = 0.48 - 2.72 atm \n30% 02 = 0.34 - 1.84 atm \n40% 02 = 0.27 - 1.36 atm \n50% 02 = 0.23 - 1.09 atm \n60% 02 = 0.20 - 0.88 atm \n70% 02 = 0.18 - 0.75 atm \n80% 02 = 0.16 - 0.68 atm \n90% 02 = 0.15 - 0.65 atm \n100% 02 = 0.14 - 0.61 atm"
+  ],
+  "planetOrbitalPeriod": [
+    "The length of a year on your planet, in Earth years"
+  ],
+  "planetInclination": [
+    "How inclined your planets orbit is respect to your primary habitable world's orbital plane.",
+
+    "Primary habitable world = 0º \nAll other worlds = 0 - 180º (the lower the inclination value the better)"
+  ],
+  "planetOrbitalDirection": [
+    "Prograde = your planet orbits your star in the same direction as the star's spin.",
+
+    "Retrograde = your planet orbits your star in the opposite direction of the star's spin.",
+
+    "Undefined = the orbital inclination is exactly 90º, therefore the orbit is classed as being neither prograde nor retrograde.",
+
+    "Habitable Earth-like planets should have prograde orbital directions"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": 1,
+  "universes": [{ "id": 0, "name": "Universe", "desc": ["Well"] }],
+  "galaxies": [
+    {
+      "id": 0,
+      "name": "Milky Way",
+      "desc": [""],
+      "universeId": 0,
+      "radius": 50000,
+      "stellarLocation": 25800,
+      "stellarRadius": 10,
+      "stellarDensity": 0.003
+    }
+  ],
+  "constellations": [{ "id": 1, "name": "", "desc": [""] }],
+  "systems": [
+    {
+      "id": 0,
+      "name": "Sol",
+      "desc": [""],
+      "galaxyId": 0,
+      "spacingFactor": 0.3,
+      "firstOrbit": 0.4
+    }
+  ],
+  "stars": [
+    {
+      "id": 0,
+      "name": "Sun",
+      "desc": [
+        "Sun, star around which Earth and the other components of the solar system revolve"
+      ],
+      "systemId": 0,
+      "mass": 1,
+      "currentAge": 4.5
+    }
+  ],
+  "planets": [
+    {
+      "id": 0,
+      "name": "Earth",
+      "desc": [""],
+      "systemId": 0,
+      "mass": 1,
+      "cmf": 35,
+      "axialTilt": 23.5,
+      "rotationPeriod": 24,
+      "albedo": 0.29,
+      "greenhouseEffect": 1,
+      "heightOfObserver": 1.75,
+      "semiMajorAxis": 1,
+      "eccentricity": 0.167,
+      "inclination": 0
+    }
+  ],
+  "satellites": [
+    {
+      "id": 0,
+      "name": "Moon",
+      "desc": ["The Moon is Earth's only natural satellite"],
+      "planetId": 0
+    }
+  ]
+}

@@ -1,13 +1,10 @@
 .layout {
   display: grid;
-  place-items: center;
   grid-template-columns:
     minmax(1.5rem, 1fr)
-    minmax(50rem, 60rem)
-    minmax(1rem, 1fr)
-    minmax(30rem, 50rem)
+    var(--max-width)
     minmax(1.5rem, 1fr);
-  justify-items: stretch;
+  overflow: hidden;
 
   & > *:first-child {
     grid-column: 2/3;
@@ -18,10 +15,13 @@
   }
 
   & > div > img {
-    top: 0;
-    position: sticky;
     width: 44.5rem;
     aspect-ratio: 1;
+  }
+
+  & > div {
+    display: grid;
+    place-items: center;
   }
 }
 

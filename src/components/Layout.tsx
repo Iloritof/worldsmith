@@ -13,10 +13,12 @@ const Layout = ({ columns, gap, sideGap, children }: LayoutProp) => {
   const borderGap = sideGap ? sideGap : 2;
   const remain =
     screenWidth > maxWidth
-      ? maxWidth - (borderGap * 2 + midGap)
-      : screenWidth - (borderGap * 2 + midGap);
+      ? maxWidth - midGap
+      : maxWidth - (borderGap * 2 + midGap);
 
   const leftColumn = () => {
+    if (columns[0][0] == 'default') return 'default';
+    if (columns[1][0] == 'default') return 'default';
     if (columns[0][0] == 'fixed') {
       return columns[0][1];
     } else if (columns[0][0] == 'ratio') {
@@ -37,7 +39,12 @@ const Layout = ({ columns, gap, sideGap, children }: LayoutProp) => {
   const template = `minmax(${borderGap}rem, 1fr) minmax(0px, ${leftColumn()}rem) ${midGap}rem minmax(0px, ${rightColumn}rem) minmax(${borderGap}rem, 1fr)`;
 
   return (
-    <div className='layout' style={{ gridTemplateColumns: `${template}` }}>
+    <div
+      className='layout'
+      style={
+        leftColumn() == 'default' ? {} : { gridTemplateColumns: `${template}` }
+      }
+    >
       {children}
     </div>
   );

@@ -57,27 +57,35 @@
     padding: 0.8rem;
     text-align: justify;
     top: 0;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.4rem;
     z-index: 1000;
-    translate: -3.6rem 2.4rem;
+    translate: 1.6rem 2.4rem;
     width: 45ch;
 
     @supports (backdrop-filter: blur(8rem)) {
-      background-color: hsl(var(--clr-l) / 0.04);
       backdrop-filter: blur(8rem);
+      background-color: hsl(var(--clr-l) / 0.04);
       color: hsl(var(--clr-l));
       font-weight: 400;
+    }
+
+    & > p {
+      white-space-collapse: preserve;
     }
   }
 }
 
 .attribute-group {
   display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.6rem;
   padding-block: 2.4rem;
-  border-top: 1px solid hsl(var(--clr-l) / 0.25);
+  padding-bottom: 3.6rem;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid hsl(var(--clr-l) / 0.25);
+  }
 }
 
 .attribute-group > *:only-child {

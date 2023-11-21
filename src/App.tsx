@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './routes/Root';
 import ErrorPage from './ErrorPage';
-import World from './routes/World';
+import Multiverse from './routes/Multiverse';
 import Universe from './routes/Universe';
 import Constellation from './routes/Constellation';
 import Galaxy from './routes/Galaxy';
@@ -9,18 +9,10 @@ import Star from './routes/Star';
 import Planet from './routes/Planet';
 import Satellite from './routes/Satellite';
 
-import { data } from './utils/data.ts';
-import { useState, useEffect } from 'react';
+import UseFetch from './hooks/UseFetch';
 
 function App() {
-  const [world, setWorld] = useState(data);
-  useEffect(() => {
-    first;
-
-    return () => {
-      second;
-    };
-  }, []);
+  const [world, setWorld] = UseFetch();
 
   return (
     <RouterProvider
@@ -32,7 +24,7 @@ function App() {
         },
         {
           path: 'world',
-          element: <World />,
+          element: <Multiverse setData={setWorld} data={world} />,
         },
         {
           path: 'universe',
@@ -40,23 +32,23 @@ function App() {
         },
         {
           path: 'constellations/:constallationId',
-          element: <Constellation />,
+          element: <Constellation setData={setWorld} data={world} />,
         },
         {
           path: 'galaxys/:galaxyId',
-          element: <Galaxy />,
+          element: <Galaxy setData={setWorld} data={world} />,
         },
         {
           path: 'stars/:starId',
-          element: <Star />,
+          element: <Star setData={setWorld} data={world} />,
         },
         {
           path: 'planets/:planetId',
-          element: <Planet />,
+          element: <Planet setData={setWorld} data={world} />,
         },
         {
           path: 'satellite/:satelliteId',
-          element: <Satellite />,
+          element: <Satellite setData={setWorld} data={world} />,
         },
       ])}
     />

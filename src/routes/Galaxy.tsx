@@ -1,8 +1,10 @@
-export default function Galaxy() {
+import { World } from '../utils/type';
 
-  return (
-    <div>
-      Galaxy
-    </div>
-  )
+interface RouteProps {
+  data: World;
+  setData?: React.Dispatch<React.SetStateAction<World>>;
+}
+
+export default function Galaxy({ data }: RouteProps) {
+  return <div>Galaxy</div>;
 }

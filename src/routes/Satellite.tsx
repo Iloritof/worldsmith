@@ -1,8 +1,10 @@
-export default function Satellite() {
+import { World } from '../utils/type';
 
-  return (
-    <div>
-      Satellite
-    </div>
-  )
+interface RouteProps {
+  data: World;
+  setData?: React.Dispatch<React.SetStateAction<World>>;
+}
+
+export default function Satellite({ data }: RouteProps) {
+  return <div>Satellite</div>;
 }
